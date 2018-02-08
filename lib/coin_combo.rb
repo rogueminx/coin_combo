@@ -9,7 +9,10 @@ class MakeMoneyMoney
     change_needed = (money_paid - item_cost)
     coin_array = []
     until (change_needed <= 0)
-      if (change_needed <= 9) & (change_needed >= 5)
+      if (change_needed <= 24) & (change_needed >= 11)
+        coin_array.push(10)
+        change_needed -= 10
+      elsif (change_needed <= 9) & (change_needed >= 5)
         coin_array.push(5)
         change_needed -= 5
       else (change_needed <= 4)
