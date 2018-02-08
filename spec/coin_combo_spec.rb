@@ -15,4 +15,8 @@ describe ('#changemaker') do
     change = MakeMoneyMoney.new()
     expect(change.changemaker(8, 15)).to(eq(([5, 1, 1])))
   end
+  it ("will give 1 dime 1 nickel and 2 pennies in change for something that costs 20 cents") do
+    change = MakeMoneyMoney.new()
+    expect(change.changemaker(20, 37)).to(eq(([10, 5, 1, 1])))
+  end
 end
